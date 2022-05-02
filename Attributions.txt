@@ -312,3 +312,8 @@ Main Menu music: https://opengameart.org/content/remakes by https://opengameart.
 
 1st map tileset + obstacles: Art by Daniel Siegmund and commissioned by OpenGameArt.org (http://opengameart.org)
 
+Health bar: https://opengameart.org/content/health-and-mana-bars by https://opengameart.org/users/lancel 
+
+Coin: https://opengameart.org/content/rotating-coin by https://opengameart.org/users/puddin 
+
+Potion: https://opengameart.org/content/potion-bottles by https://opengameart.org/users/rafaelchm 
