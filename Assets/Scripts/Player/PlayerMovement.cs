@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    //Based on tutorial found at: https://www.youtube.com/watch?v=whzomFgjT50&ab_channel=Brackeys 
     void Update()
     {
         playerInput.x = Input.GetAxisRaw("Horizontal"); //Checks for horizontal input
