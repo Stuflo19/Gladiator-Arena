@@ -647,7 +647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: How To Play
+  m_Text: About
 --- !u!222 &631934356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 1228498203}
   - component: {fileID: 1228498202}
   m_Layer: 0
-  m_Name: How To Play
+  m_Name: About
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1497,7 +1497,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1215060431}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: HowToPlay
+        m_MethodName: About
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

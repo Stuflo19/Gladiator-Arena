@@ -73,8 +73,14 @@ public class PlayerHealth : MonoBehaviour
     //Function to kill the player
     IEnumerator die()
     {
+        //turn off player scripts
+        gameObject.GetComponent<PlayerAttack>().enabled = false;
+        gameObject.GetComponent<PlayerMovement>().enabled = false;
+
         //play player death
         anim.SetTrigger("Die");
+
+        //wait for death to play
         yield return new WaitForSeconds(0.5f);
 
         //show player the death menu

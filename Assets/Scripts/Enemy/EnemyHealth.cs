@@ -39,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
 
         //change their colour for half a second
         gameObject.GetComponent<Renderer>().material.color = Color.red;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         gameObject.GetComponent<Renderer>().material.color = Color.white;
 
         //if the health is below or is 0
@@ -55,7 +55,7 @@ public class EnemyHealth : MonoBehaviour
     //Function to kill enemy
     private IEnumerator die()
     {
-        wavecontroller.GetComponent<SpawnWave>().EnemyKilled(); //Calls to the wave that an enemy has died
+        StartCoroutine(wavecontroller.GetComponent<SpawnWave>().EnemyKilled()); //Calls to the wave that an enemy has died
 
         anim.SetTrigger("Die"); //Trigger death animation
 

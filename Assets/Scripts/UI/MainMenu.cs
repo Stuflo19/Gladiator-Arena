@@ -34,12 +34,12 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            
+
         }
     }
 
     //Function to view how to play when button pressed
-    public void HowToPlay()
+    public void About()
     {
         SceneManager.LoadScene(7);
     }

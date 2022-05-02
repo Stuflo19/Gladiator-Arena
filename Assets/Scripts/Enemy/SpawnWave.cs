@@ -50,8 +50,9 @@ public class SpawnWave : MonoBehaviour
         {
             StartCoroutine(Wave(wavenum)); //Calls the wave with current wave number
         }
-        else if(numenemies == 0 && wavenum > 5 && waveCD <= 0)
+        else if(numenemies == 0 && wavenum == 6 && waveCD <= 0)
         {
+            wavedisplay.text = "Wave: Boss"; //Update wave text
             BossWave();
         }
     }
@@ -112,22 +113,25 @@ public class SpawnWave : MonoBehaviour
     }
 
     //Function used to track enemies alive in the wave
-    public void EnemyKilled()
+    public IEnumerator EnemyKilled()
     {
         numenemies--; //Decrement number of enemies
 
         //if the numenemies is 0 and its the end of the boss wave
         if(numenemies == 0 && wavenum == 6)
         {
+            waveCD = 5f;
+
             //Increment player level if < num maps
             if(level < 5)
             {
                 level++;
-                Debug.Log(level);
             }
 
-            completeMenu.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+
             //Bring up menu
+            completeMenu.SetActive(true);
             Time.timeScale = 0f;
         }
 
@@ -137,6 +141,8 @@ public class SpawnWave : MonoBehaviour
             wavenum++; //increase wave reached to increase difficulty
             waveCD = 5f;
         }
+
+        yield return 0f;
 
     }
 
